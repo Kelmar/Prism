@@ -63,7 +63,7 @@
     jmp monitor
 
     ; Shouldn't be possible to get here, but if we do, just restart the monitor.
-    bra @biso_loop
+    bra @bios_loop
 .endproc
 
 ; Test system call

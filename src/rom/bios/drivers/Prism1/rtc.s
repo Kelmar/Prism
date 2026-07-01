@@ -159,7 +159,7 @@
     php
     ACC8
 
-    ; Start at the begining
+    ; Start at the beginning
     stz RTC_RAM_ADDR
 
     ; Setup for burst mode reading of extended RAM
@@ -177,7 +177,7 @@
 
     ; Read boot order byte
     lda RTC_RAM_DATA
-    ; Byte is divied into 2 (4-bit) values, MSB being first try boot, LSB being the last try boot
+    ; Byte is divided into 2 (4-bit) values, MSB being first try boot, LSB being the last try boot
     ; 0 - Boot to Monitor ROM
     ; 1 - Boot to BASIC ROM
     ; 2 - Boot from removable media

@@ -82,7 +82,7 @@
 .define SERIAL_OPCR SERIAL_BASE + 13
 
 ; Start counter command (read)
-.define SERAIL_START SERIAL_BASE + 14
+.define SERIAL_START SERIAL_BASE + 14
 
 ; Set output ports (write)
 .define SERIAL_OUT  SERIAL_BASE + 14
@@ -91,7 +91,7 @@
 .define SERIAL_STOP SERIAL_BASE + 15
 
 ; Reset output ports (write)
-.define SERAIL_ROUT SERIAL_BASE + 15
+.define SERIAL_ROUT SERIAL_BASE + 15
 
 ; ************************************************************************
 

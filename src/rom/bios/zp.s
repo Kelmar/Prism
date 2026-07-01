@@ -17,7 +17,7 @@
 
 ; ************************************************************************
 
-; Scratch space for preservering A(C) register
+; Scratch space for preserving A(C) register
 TMP_A: .res 1
 
 ; Scratch space for preserving B register
