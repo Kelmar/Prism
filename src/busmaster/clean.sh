@@ -1,0 +1,1 @@
+rm -f *.edif *.fit *.io *.jed *.log *.pi *.tt3

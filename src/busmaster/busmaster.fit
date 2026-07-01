@@ -1,0 +1,424 @@
+Atmel ATF1502 Fitter Version 1918 ,running Mon Sep 30 12:58:17 2024
+
+
+
+
+fit1502
+-i busmaster.edif
+-ifmt edif
+-o busmaster.jed
+-lib C:\ATMEL_PLS_Tools\Prochip\pldfit\aprim.lib
+-tech ATF1502AS
+-device PLCC44
+-tpd 7
+-tdi_pullup on
+-tms_pullup on
+-output_fast off
+-xor_synthesis on
+
+****** Initial fitting strategy and property ******
+ Netlist_in_file = busmaster.edif
+ Netlist_out_file = busmaster.tt3
+ Jedec_file = busmaster.jed
+ Log_file = busmaster.fit
+ Device_name = PLCC44
+ Tech_name = ATF1502AS 
+ Package_type = PLCC
+ Preassignment = try 
+ Security_mode = OFF
+ Pin-Keeper = OFF
+ supporter = ABEL
+ optimize = ON
+ Xor_synthesis =  ON
+ Foldback_logic = OFF
+ Cascade_logic = OFF
+ Output_fast = OFF
+ *******************************
+ Power down pin 1 = OFF
+ Power down pin 2 = OFF
+ power_reset = OFF
+ JTAG = ON
+ TDI pullup = ON
+ TMS pullup = ON
+ MC_power = OFF
+ Open_collector = OFF
+ ITD0 = ON
+ ITD1 = ON
+ ITD2 = ON
+ Fast_inlatch = off
+ TPD = 7
+ Latch_synthesis = off 
+ Push_gate = on 
+ Verilog_sim = off 
+ VHDL_sim = off 
+ Out_Edif = off 
+ Logic Doubling = off 
+ ****** End of fitting strategy and property ******
+---------------------------------------------------------
+ Fitter_Pass 1, Preassign = KEEP, LOGIC_DOUBLING : OFF 
+ ... 
+
+Performing global Output Enable pin assignments ...
+
+Performing global pin assignments ...
+--------------------------------------
+
+
+
+Final global control pins assignment (if applicable)...
+-------------------------------------------------------
+phi0 assigned to pin  43
+
+
+
+Performing input pin pre-assignments ...
+------------------------------------
+phi0 assigned to pin  43
+
+Attempt to place floating signals ...
+------------------------------------
+wr is placed at pin 4 (MC 1)
+rd is placed at pin 5 (MC 2)
+phi2 is placed at pin 6 (MC 3)
+TDI is placed at pin 7 (MC 4)
+ram0 is placed at pin 8 (MC 5)
+dev_7 is placed at pin 9 (MC 6)
+dev_6 is placed at pin 11 (MC 7)
+dev_4 is placed at pin 12 (MC 8)
+TMS is placed at pin 13 (MC 9)
+id00008QN is placed at feedback node 609 (MC 9)
+dev_5 is placed at pin 14 (MC 10)
+dev_2 is placed at pin 16 (MC 11)
+dev_3 is placed at pin 17 (MC 12)
+dev_1 is placed at pin 18 (MC 13)
+rom is placed at pin 19 (MC 14)
+dev_0 is placed at pin 20 (MC 15)
+ram1 is placed at pin 21 (MC 16)
+up_addr_1 is placed at pin 41 (MC 17)
+up_addr_0 is placed at pin 40 (MC 18)
+mid_addr_0 is placed at pin 39 (MC 19)
+TDO is placed at pin 38 (MC 20)
+id00007Q is placed at feedback node 620 (MC 20)
+mid_addr_1 is placed at pin 37 (MC 21)
+up_addr_2 is placed at pin 36 (MC 22)
+low_addr_1 is placed at pin 34 (MC 23)
+low_addr_0 is placed at pin 33 (MC 24)
+TCK is placed at pin 32 (MC 25)
+id00081 is placed at feedback node 625 (MC 25)
+rwb is placed at pin 31 (MC 26)
+vda is placed at pin 29 (MC 27)
+low_addr_2 is placed at pin 28 (MC 28)
+id00021Q is placed at feedback node 631 (MC 31)
+phi2_s is placed at pin 24 (MC 32)
+
+                                                u  u  
+                                                p  p  
+                                                _  _  
+                                                a  a  
+                                                d  d  
+                     p                    p     d  d  
+                     h        V           h  G  r  r  
+                     i  r  w  C  N  N  N  i  N  _  _  
+                     2  d  r  C  C  C  C  0  D  1  0  
+                 +------------------------------------+
+                 |   6  5  4  3  2  1 44 43 42 41 40  |
+              TDI| 7                               39 |mid_addr_0
+             ram0| 8                               38 |TDO
+            dev_7| 9                               37 |mid_addr_1
+              GND| 10                              36 |up_addr_2
+            dev_6| 11            ATF1502           35 |VCC
+            dev_4| 12         44-Lead PLCC         34 |low_addr_1
+              TMS| 13                              33 |low_addr_0
+            dev_5| 14                              32 |TCK
+              VCC| 15                              31 |rwb
+            dev_2| 16                              30 |GND
+            dev_3| 17                              29 |vda
+                 |  18 19 20 21 22 23 24 25 26 27 28  |
+                 +------------------------------------+
+                     d  r  d  r  G  V  p  N  N  N  l  
+                     e  o  e  a  N  C  h  C  C  C  o  
+                     v  m  v  m  D  C  i           w  
+                     _     _  1        2           _  
+                     1     0           _           a  
+                                       s           d  
+                                                   d  
+                                                   r  
+                                                   _  
+                                                   2  
+
+
+
+
+VCC = Supply Voltage pin for the device core
+
+GND = GND pin which must be connected to ground
+
+TMS,TDI,TDO,TDI = JTAG pins reserved for JTAG interface
+
+NC = Unused I/O pins which must be unconnected on the board
+
+Universal-Interconnect-Multiplexer assignments
+------------------------------------------------
+FanIn assignment for block A [25]
+{
+dev_7,dev_4,dev_6,dev_0,dev_1,dev_2,dev_3,dev_5,
+id00021Q,id00008QN,id00081,id00007Q,
+low_addr_1,low_addr_0,
+mid_addr_1,mid_addr_0,
+phi0,phi2,
+ram0,rom,ram1,rwb,
+up_addr_2,up_addr_0,up_addr_1,
+}
+Multiplexer assignment for block A
+up_addr_2		(MC21	P)   : MUX 0		Ref (B22p)
+dev_7			(MC3	P)   : MUX 1		Ref (A6p)
+dev_4			(MC5	P)   : MUX 2		Ref (A8p)
+mid_addr_1		(MC20	P)   : MUX 3		Ref (B21p)
+low_addr_1		(MC22	P)   : MUX 4		Ref (B23p)
+ram0			(MC2	P)   : MUX 5		Ref (A5p)
+id00021Q		(MC16	FB)  : MUX 6		Ref (B31fb)
+dev_6			(MC4	P)   : MUX 7		Ref (A7p)
+low_addr_0		(MC23	P)   : MUX 8		Ref (B24p)
+phi0			(MC24	FB)  : MUX 9		Ref (GCLK)
+up_addr_0		(MC18	P)   : MUX 10		Ref (B18p)
+id00008QN		(MC6	FB)  : MUX 11		Ref (A9fb)
+up_addr_1		(MC17	P)   : MUX 13		Ref (B17p)
+mid_addr_0		(MC19	P)   : MUX 14		Ref (B19p)
+phi2			(MC1	P)   : MUX 17		Ref (A3p)
+id00081			(MC15	FB)  : MUX 19		Ref (B25fb)
+dev_0			(MC12	P)   : MUX 20		Ref (A15p)
+rom			(MC11	P)   : MUX 24		Ref (A14p)
+dev_1			(MC10	P)   : MUX 26		Ref (A13p)
+ram1			(MC13	P)   : MUX 28		Ref (A16p)
+dev_2			(MC8	P)   : MUX 30		Ref (A11p)
+id00007Q		(MC14	FB)  : MUX 31		Ref (B20fb)
+dev_3			(MC9	P)   : MUX 33		Ref (A12p)
+rwb			(MC25	P)   : MUX 34		Ref (B26p)
+dev_5			(MC7	P)   : MUX 35		Ref (A10p)
+
+FanIn assignment for block B [9]
+{
+id00081,
+low_addr_2,
+mid_addr_1,mid_addr_0,
+phi2,
+up_addr_2,up_addr_0,up_addr_1,
+vda,
+}
+Multiplexer assignment for block B
+up_addr_2		(MC7	P)   : MUX 0		Ref (B22p)
+mid_addr_1		(MC6	P)   : MUX 3		Ref (B21p)
+up_addr_0		(MC4	P)   : MUX 10		Ref (B18p)
+up_addr_1		(MC3	P)   : MUX 13		Ref (B17p)
+mid_addr_0		(MC5	P)   : MUX 14		Ref (B19p)
+phi2			(MC1	P)   : MUX 17		Ref (A3p)
+id00081			(MC2	FB)  : MUX 19		Ref (B25fb)
+vda			(MC8	P)   : MUX 31		Ref (B27p)
+low_addr_2		(MC9	P)   : MUX 32		Ref (B28p)
+
+Creating JEDEC file busmaster.jed ...
+
+PLCC44 programmed logic:
+-----------------------------------
+phi2_s = 1;
+
+!rd = (phi0 & rwb);
+
+!wr = (phi0 & !rwb);
+
+ram0.D = ((id00081.Q & ram0.Q)
+	# (!id00081.Q & up_addr_2));
+
+phi2.D = !phi2.Q;
+
+id00007Q = ((up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !low_addr_2 & !up_addr_1)
+	# (up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !low_addr_2 & !up_addr_0));
+
+ram1.D = ((!id00081.Q & up_addr_1 & up_addr_0)
+	# (!id00081.Q & mid_addr_0 & mid_addr_1)
+	# (!id00081.Q & !up_addr_2)
+	# (id00081.Q & ram1.Q));
+
+id00008QN = ((up_addr_2 & up_addr_1 & up_addr_0)
+	# id00081.Q);
+
+id00021Q = ((low_addr_2 & up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !up_addr_1)
+	# (low_addr_2 & up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !up_addr_0));
+
+id00081.D = ((up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !up_addr_0)
+	# id00081.Q
+	# (up_addr_2 & vda & mid_addr_0 & mid_addr_1 & !up_addr_1));
+
+!dev_0.D = ((id00008QN & !dev_0.Q)
+	# (!id00008QN & !low_addr_1 & !low_addr_0 & id00007Q));
+
+!rom.D = ((!id00081.Q & up_addr_2 & up_addr_1 & up_addr_0)
+	# (id00081.Q & !rom.Q));
+
+!dev_3.D = ((id00008QN & !dev_3.Q)
+	# (!id00008QN & low_addr_1 & low_addr_0 & id00007Q));
+
+!dev_1.D = ((id00008QN & !dev_1.Q)
+	# (!id00008QN & !low_addr_1 & low_addr_0 & id00007Q));
+
+!dev_2.D = ((id00008QN & !dev_2.Q)
+	# (!id00008QN & low_addr_1 & !low_addr_0 & id00007Q));
+
+!dev_6.D = ((id00008QN & !dev_6.Q)
+	# (!id00008QN & low_addr_1 & !low_addr_0 & id00021Q));
+
+!dev_4.D = ((id00008QN & !dev_4.Q)
+	# (!id00008QN & !low_addr_1 & !low_addr_0 & id00021Q));
+
+!dev_5.D = ((id00008QN & !dev_5.Q)
+	# (!id00008QN & !low_addr_1 & low_addr_0 & id00021Q));
+
+!dev_7.D = ((id00008QN & !dev_7.Q)
+	# (!id00008QN & low_addr_1 & low_addr_0 & id00021Q));
+
+ram0.C = phi2.Q;
+
+phi2.C = phi0;
+
+ram1.C = phi2.Q;
+
+id00081.C = phi2.Q;
+
+dev_0.C = phi2.Q;
+
+rom.C = phi2.Q;
+
+dev_3.C = phi2.Q;
+
+dev_1.C = phi2.Q;
+
+dev_2.C = phi2.Q;
+
+dev_6.C = phi2.Q;
+
+dev_4.C = phi2.Q;
+
+dev_5.C = phi2.Q;
+
+dev_7.C = phi2.Q;
+
+
+PLCC44 Pin/Node Placement:
+------------------------------------
+Pin 4  = wr; /* MC 1 */
+Pin 5  = rd; /* MC 2 */
+Pin 6  = phi2; /* MC 3 */
+Pin 7  = TDI; /* MC 4 */
+Pin 8  = ram0; /* MC 5 */
+Pin 9  = dev_7; /* MC 6 */
+Pin 11 = dev_6; /* MC  7 */
+Pin 12 = dev_4; /* MC  8 */
+Pin 13 = TMS; /* MC  9 */
+Pin 14 = dev_5; /* MC 10 */ 
+Pin 16 = dev_2; /* MC 11 */ 
+Pin 17 = dev_3; /* MC 12 */ 
+Pin 18 = dev_1; /* MC 13 */ 
+Pin 19 = rom; /* MC 14 */ 
+Pin 20 = dev_0; /* MC 15 */ 
+Pin 21 = ram1; /* MC 16 */ 
+Pin 24 = phi2_s; /* MC 32 */ 
+Pin 28 = low_addr_2; /* MC 28 */ 
+Pin 29 = vda; /* MC 27 */ 
+Pin 31 = rwb; /* MC 26 */ 
+Pin 32 = TCK; /* MC 25 */ 
+Pin 33 = low_addr_0; /* MC 24 */ 
+Pin 34 = low_addr_1; /* MC 23 */ 
+Pin 36 = up_addr_2; /* MC 22 */ 
+Pin 37 = mid_addr_1; /* MC 21 */ 
+Pin 38 = TDO; /* MC 20 */ 
+Pin 39 = mid_addr_0; /* MC 19 */ 
+Pin 40 = up_addr_0; /* MC 18 */ 
+Pin 41 = up_addr_1; /* MC 17 */ 
+Pin 43 = phi0;
+PINNODE 609 = id00008QN; /* MC 9 Feedback */
+PINNODE 620 = id00007Q; /* MC 20 Feedback */
+PINNODE 625 = id00081; /* MC 25 Feedback */
+PINNODE 631 = id00021Q; /* MC 31 Feedback */
+
+** Resource Usage **
+
+
+DCERP Field = Summary of Allocations.
+|||||
+|||||_Preset [p,-]       ==  p = PT preset, - No Preset.
+||||
+||||__Reset [g,r,-]      ==  g= Global AR, r = PT reset, - No reset.
+|||
+|||___Clock Enable [e,-] ==  e = Product Term, - always enabled.
+||
+||____Clock [c,g,-],     ==  c = Product term, g = Global term, - No Clock.
+|
+|_____Type [C,D,L,T],    ==  Register type C= combin, D=dff, L=latch, T=tff.
+
+For input only = INPUT.
+
+
+SO Pin Options Field = Summary of Allocations.
+||
+||_OpenCol [o,-]      ==  o = Open Collector enabled, - CMOS drive.
+|
+|__Slew [s,f]         ==  Output Slew/Drive rate, s = slow/low, f = fast/hi drive.
+
+
+MCell Pin# Oe   PinDrive   DCERP  FBDrive   DCERP  Foldback  CascadeOut     TotPT SO
+MC1   4    on   wr         C----  --               --        --             1     s- 
+MC2   5    on   rd         C----  --               --        --             1     s- 
+MC3   6    on   phi2       Dg---  --               --        --             1     s- 
+MC4   7    --   TDI        INPUT  --               --        --             0     s- 
+MC5   8    on   ram0       Dc---  --               --        --             3     s- 
+MC6   9    on   dev_7      Dc---  --               --        --             3     s- 
+MC7   11   on   dev_6      Dc---  --               --        --             3     s- 
+MC8   12   on   dev_4      Dc---  --               --        --             3     s- 
+MC9   13   --   TMS        INPUT  id00008QN C----  --        --             2     s- 
+MC10  14   on   dev_5      Dc---  --               --        --             3     s- 
+MC11  16   on   dev_2      Dc---  --               --        --             3     s- 
+MC12  17   on   dev_3      Dc---  --               --        --             3     s- 
+MC13  18   on   dev_1      Dc---  --               --        --             3     s- 
+MC14  19   on   rom        Dc---  --               --        --             3     s- 
+MC15  20   on   dev_0      Dc---  --               --        --             3     s- 
+MC16  21   on   ram1       Dc---  --               NA        --             5     s- 
+MC17  41   --   up_addr_1  INPUT  --               --        --             0     s- 
+MC18  40   --   up_addr_0  INPUT  --               --        --             0     s- 
+MC19  39   --   mid_addr_0 INPUT  --               --        --             0     s- 
+MC20  38   --   TDO        C----  id00007Q  C----  --        --             2     s- 
+MC21  37   --   mid_addr_1 INPUT  --               --        --             0     s- 
+MC22  36   --   up_addr_2  INPUT  --               --        --             0     s- 
+MC23  34   --   low_addr_1 INPUT  --               --        --             0     s- 
+MC24  33   --   low_addr_0 INPUT  --               --        --             0     s- 
+MC25  32   --   TCK        INPUT  id00081   Dc---  --        --             4     s- 
+MC26  31   --   rwb        INPUT  --               --        --             0     s- 
+MC27  29   --   vda        INPUT  --               --        --             0     s- 
+MC28  28   --   low_addr_2 INPUT  --               --        --             0     s- 
+MC29  27        --                --               --        --             0     s- 
+MC30  26        --                --               --        --             0     s- 
+MC31  25        --                id00021Q  C----  --        --             2     s- 
+MC32  24   on   phi2_s     C----  --               --        --             0     s- 
+MC0   2         --                --               --        --             0     s- 
+MC0   1         --                --               --        --             0     s- 
+MC0   44        --                --               --        --             0     s- 
+MC0   43        phi0       INPUT  --               --        --             0     s- 
+
+Logic Array Block			Macro Cells	I/O Pins	Foldbacks	TotalPT	FanIN		Cascades
+A: MC1	- MC16		15/16(93%)	16/16(100%)	0/16(0%)	40/80(50%)	25/40(62%)	0
+B: MC17	- MC32		5/16(31%)	13/16(81%)	0/16(0%)	8/80(10%)	9/40(22%)	0
+
+Total dedicated input used:	1/4 	(25%)
+Total I/O pins used		29/32 	(90%)
+Total Macro cells used 		20/32 	(62%)
+Total Flip-Flop used 		13/32 	(40%)
+Total Foldback logic used 	0/32 	(0%)
+Total Nodes+FB/MCells 		20/32 	(62%)
+Total cascade used 		0
+Total input pins 			14
+Total output pins 		16
+Total Pts 				48
+Creating pla file busmaster.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
+
+----------------  End fitter, Design FITS
+$Device PLCC44 fits; JTAG ON; Secure OFF
+FIT1502 completed in 0.00 seconds

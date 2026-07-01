@@ -1,0 +1,1 @@
+The 138 data sheet shows a circuit for doing a 32-bit decode, which is relevant to our address decoding scheme and the design of the memory module we have worked out.

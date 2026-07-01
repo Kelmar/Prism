@@ -1,0 +1,59 @@
+64KByte address map:
+
+$0000..$7FFF - RAM - 0 (32KB)
+$8000..$DEFF - RAM - 1 (23.75KB)
+
+$DF00..$DFFF - DEVICES (256 bytes)
+  $00..$1F - DEV 0
+  $20..$3F - DEV 1
+  $40..$5F - DEV 2
+  $60..$7F - DEV 3
+  $80..$9F - DEV 4
+  $A0..$BF - DEV 5
+  $C0..$DF - DEV 6
+  $E0..$FF - DEV 7
+
+$E000..$FFFF - ROM - (8KB)
+
+A0-A4 = Device address lines
+A5-A7 = Device select lines
+
+1     1
+5432 1098 7654 3210
+
+0111 1111 1111 1111 = 7FFF
+
+1000 0000 0000 0000 = 8000
+1101 1110 1111 1111 = DEFF
+
+1101 1111 0000 0000 = DF00
+1101 1111 1111 1111 = DFFF
+
+1110 0000 000 00000 = E000
+1111 1111 111 11111 = FFFF
+
+
+
+$3F FFFF = 4MByte
+
+ $7 FFFF = 512KByte
+
+
+$40 / $8 = $8
+
+PLD Pins
+A8-A15		8 I
+DBA0-DBA7	8 I/O
+D0-D7		8 I/O   = 24
+BA0-BA5		6 O     = 30
+PHI2		1 I
+R/W		1 I
+RD		1 O
+WR		1 O     = 34
+
+
+MS0-MS4		5 O (Demultiplexer select)
+
+Total 39 needed pins
+
+
