@@ -1,0 +1,291 @@
+// Default palette for 12-bit color
+//
+// Somewhat matches the VGA 256 color palette
+//
+
+// First 16 colors are same as CGA 16-colors
+000 // Black
+00A // Blue
+0A0 // Green
+0AA // Cyan
+A00 // Red
+A0A // Magenta
+A50 // Brown
+AAA // Light Grey
+555 // Dark Grey
+55F // Light Blue
+5F5 // Light Green
+5FF // Light Cyan
+F55 // Light Red
+F5F // Light Magenta
+FF5 // Yellow
+FFF // White
+
+// Grays
+111
+222
+333
+444
+555
+666
+777
+888
+999
+aaa
+bbb
+ccc
+ddd
+eee
+fff
+
+// Row 2
+00f
+40f
+80f
+b0f
+f0f
+f0b
+f08
+f04
+f00
+f40
+f80
+fb0
+ff0
+bf0
+8f0
+4f0
+
+// Row 3
+0f0
+0f4
+0f8
+0fb
+0ff
+0bf
+08f
+04f
+88f
+98f
+b8f
+d8f
+f8f
+f8d
+f8b
+f89
+
+// Row 4
+f88
+f98
+fb8
+fd8
+ff8
+df8
+bf8
+9f8
+8f8
+8f9
+8fb
+8fd
+8ff
+8df
+8bf
+89f
+
+// Row 5
+bbf
+cbf
+dbf
+ebf
+fbf
+fbe
+fbd
+fbc
+fbb
+fcb
+fdb
+feb
+ffb
+efb
+dfb
+cfb
+
+// Row 6
+bfb
+bfc
+bfd
+bfe
+bff
+bef
+bdf
+bcf
+007
+107
+307
+507
+707
+705
+703
+701
+
+// Row 7
+700
+710
+730
+750
+770
+570
+370
+170
+070
+071
+073
+075
+077
+057
+037
+017
+
+// Row 8
+337
+437
+537
+637
+737
+736
+735
+734
+733
+743
+753
+763
+773
+673
+573
+473
+
+// Row 9
+373
+374
+375
+376
+377
+367
+357
+347
+557
+557
+657
+657
+757
+756
+756
+755
+
+// Row 10
+755
+755
+765
+765
+775
+675
+675
+575
+575
+575
+576
+576
+577
+567
+567
+557
+
+// Row 11
+004
+104
+204
+304
+404
+403
+402
+401
+400
+410
+420
+430
+440
+340
+240
+140
+
+// Row 12
+040
+041
+042
+043
+044
+034
+024
+014
+224
+224
+324
+324
+424
+423
+423
+422
+
+// Row 13
+422
+422
+432
+432
+442
+342
+342
+242
+242
+242
+243
+243
+244
+234
+234
+224
+
+// Row 14
+224
+324
+324
+324
+424
+423
+423
+423
+422
+432
+432
+432
+442
+342
+342
+342
+
+// Row 15
+242
+243
+243
+243
+244
+234
+234
+234
+000
+000
+000
+000
+000
+000
+000
+000
