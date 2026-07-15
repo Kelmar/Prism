@@ -2,20 +2,16 @@
 ; Project: Prism
 ; Author: Bryce Simonds
 ; License: MIT
-; File: prism1.s
-; Description: Platform initialization for the Kowalski simulator.
+; File: str.inc
+; Description: BIOS common string functions
 ;
-; Copyright (c) 2023-2024
+; Copyright (c) 2023-2026
 ; ************************************************************************
 
-.export platform_init
-
-; ************************************************************************
-
-.segment "BIOS"
-
-.proc platform_init: near
-    rts
-.endproc
+; Defined in str.s
+.ifndef STR_S
+.import to_lower, to_upper
+.import zstr_cmp, zstr_icmp
+.endif
 
 ; ************************************************************************

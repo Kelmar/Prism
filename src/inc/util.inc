@@ -1,7 +1,7 @@
 ; ************************************************************************
 ; Project: Prism
 ; Author: Bryce Simonds
-; License: BSD 3-Clause
+; License: MIT
 ; File: prism1.s
 ; Description: Utilties for working with 65816 assembly.
 ;

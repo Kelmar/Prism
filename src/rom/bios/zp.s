@@ -1,7 +1,7 @@
 ; ************************************************************************
 ; Project: Prism
 ; Author: Bryce Simonds
-; License: BSD 3-Clause
+; License: MIT
 ; File: zp.s
 ; Description: Zero page declarations
 ;

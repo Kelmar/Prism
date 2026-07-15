@@ -1,7 +1,7 @@
 ; ************************************************************************
 ; Project: Prism
 ; Author: Bryce Simonds
-; License: BSD 3-Clause
+; License: MIT
 ; File: prism1.s
 ; Description: Initialization functions for the Prism1 development platform
 ;

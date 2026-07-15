@@ -1,7 +1,7 @@
 ; ************************************************************************
 ; Project: Prism
 ; Author: Bryce Simonds
-; License: BSD 3-Clause
+; License: MIT
 ; File: prism1.s
 ; Description: Main entry point for BIOS after reset.
 ;
@@ -86,7 +86,7 @@ nmi_service:
     ; For now we do nothing, but in the future we should start the debugger.
     rti
 
-;-------------------------------------------------------------------------
+; ************************************************************************
 
 .segment "RODATA"
 
